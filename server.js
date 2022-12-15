@@ -1,6 +1,8 @@
 //===================== SETUP =====================//
 import express from "express";
 import postgres from "postgres";
+import dotenv from "dotenv";
+dotenv.congif();
 const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(express.json());
