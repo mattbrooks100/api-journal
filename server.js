@@ -5,7 +5,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.static("public"));
-const sql = postgres({ database: "journal" });
+const sql = postgres(
+  "postgres://journal_entry_user:g2zXRa9HvQkW8jPvQzbuitjA024XDJI5@dpg-cedod3ha6gdgn5etiqe0-a.ohio-postgres.render.com/journal_entry?ssl=true"
+);
 
 //================== API ROUTES ==================//
 // GET - read all journal entries
