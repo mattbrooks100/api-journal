@@ -4,16 +4,17 @@ import postgres from "postgres";
 const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(express.json());
+app.use(express.static("public"));
 const sql = postgres({ database: "journal" });
 
 //================== API ROUTES ==================//
 // GET - read all journal entries
-app.get("/entries", (req, res, next) => {
-  sql`SELECT * FROM entry`.then((result) => res.json(result)).catch(next);
+app.get("/api/entries", (req, res, next) => {
+  sql`SELECT * FROM entry ORDER BY entry_date DESC`.then((result) => res.json(result)).catch(next);
 });
 
 // GET - read a single entry
-app.get("/entries/:id", (req, res, next) => {
+app.get("/api/entries/:id", (req, res, next) => {
   const { id } = req.params;
   sql`SELECT * FROM entry WHERE id=${id}`
     .then((result) => {
@@ -27,7 +28,7 @@ app.get("/entries/:id", (req, res, next) => {
 });
 
 // POST - create a new entry
-app.post("/entries", (req, res, next) => {
+app.post("/api/entries", (req, res, next) => {
   const newEntry = req.body;
 
   // Delete any properties that aren't strings (only want to add strings to the new journal entry)
@@ -44,7 +45,7 @@ app.post("/entries", (req, res, next) => {
 });
 
 // PATCH - update an existing entry
-app.patch("/entries/:id", (req, res, next) => {
+app.patch("/api/entries/:id", (req, res, next) => {
   const { id } = req.params;
   sql`UPDATE entry SET ${sql(req.body)} WHERE id=${id} RETURNING *`
     .then((result) => {
@@ -54,7 +55,7 @@ app.patch("/entries/:id", (req, res, next) => {
 });
 
 // DELETE - remove an existing entry
-app.delete("/entries/:id", (req, res, next) => {
+app.delete("/api/entries/:id", (req, res, next) => {
   const { id } = req.params;
   sql`DELETE FROM entry WHERE id=${id} RETURNING *`
     .then((result) => {
