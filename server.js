@@ -2,7 +2,7 @@
 import express from "express";
 import postgres from "postgres";
 import dotenv from "dotenv";
-dotenv.congif();
+dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(express.json());
