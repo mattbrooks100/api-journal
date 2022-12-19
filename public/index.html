@@ -4,11 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Journal</title>
+    <title>myJournal</title>
     <script defer src="app.js"></script>
     <link rel="stylesheet" href="style.css" class="stylesheet" />
   </head>
   <body>
-    <h1>My Journal</h1>
+    <!-- Main container -->
+    <div class="mx-auto bg-amber-50">
+      <!-- Nav bar -->
+      <nav class="flex relative bg-amber-100">
+        <!-- Flex container -->
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <div class="flex m-4">
+            <img src="./images/journal.png" alt="" class="w-10 h-10" />
+            <span class="ml-2 text-4xl text-black font-sharpie font-bold">my Journal</span>
+          </div>
+        </div>
+      </nav>
+      <!-- Journal entries container -->
+      <div class="entry-container container mx-auto p-2 h-full"></div>
+    </div>
   </body>
 </html>
