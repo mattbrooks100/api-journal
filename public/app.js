@@ -7,7 +7,7 @@ fetch("/api/entries")
     for (let entry of entryArray) {
       const { entry_date, wake_feel, todo, main_entry, sleep_feel } = entry;
       const newEntry = document.createElement("div");
-      newEntry.className = "entry mb-4 p-4 bg-violet-100 shadow-lg";
+      newEntry.className = "entry mb-4 p-4 bg-amber-100 shadow-lg";
       newEntry.innerHTML = `<b>Date:</b> ${entry_date}<br>
         <b>How did you feel when you woke up?</b> ${wake_feel}<br>
         <b>What do you need to do today?</b> ${todo}<br>
@@ -16,3 +16,9 @@ fetch("/api/entries")
       entryContainer.append(newEntry);
     }
   });
+
+const newEntryButton = document.querySelector(".entry-button");
+const entryModal = document.querySelector("#entry-modal");
+const closeButton = document.querySelector("#close-button");
+newEntryButton.onclick = () => (entryModal.style.display = "block");
+closeButton.onclick = () => (entryModal.style.display = "none");
