@@ -724,6 +724,14 @@ video {
   height: auto;
 }
 
+.h-20{
+  height: 5rem;
+}
+
+.h-40{
+  height: 10rem;
+}
+
 .min-h-fit{
   min-height: -moz-fit-content;
   min-height: fit-content;
@@ -791,6 +799,10 @@ video {
 
 .resize{
   resize: both;
+}
+
+.flex-row{
+  flex-direction: row;
 }
 
 .flex-col{
@@ -873,6 +885,10 @@ video {
 
 .rounded-none{
   border-radius: 0px;
+}
+
+.rounded-xl{
+  border-radius: 0.75rem;
 }
 
 .rounded-t-md{

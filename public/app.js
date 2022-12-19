@@ -7,7 +7,7 @@ fetch("/api/entries")
     for (let entry of entryArray) {
       const { entry_date, wake_feel, todo, main_entry, sleep_feel } = entry;
       const newEntry = document.createElement("div");
-      newEntry.className = "entry mb-4 p-4 bg-amber-100 shadow-lg";
+      newEntry.className = "entry mb-4 p-4 bg-amber-100 shadow-lg rounded-xl";
       newEntry.innerHTML = `<b>Date:</b> ${entry_date}<br>
         <b>How did you feel when you woke up?</b> ${wake_feel}<br>
         <b>What do you need to do today?</b> ${todo}<br>

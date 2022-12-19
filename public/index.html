@@ -38,7 +38,40 @@
               <h5 class="text-xl font-medium">Create a new journal entry</h5>
             </div>
             <!-- Modal body -->
-            <div class="modal-body relative p-4"></div>
+            <div class="modal-body flex flex-row relative w-full p-4">
+              <form action="" method="post" class="w-full">
+                <label for="date">Date</label>
+                <input type="date" name="date" class="border-solid border-2" />
+                <p>
+                  <label for="waking">How did you feel when you woke up?</label>
+                </p>
+                <p>
+                  <textarea name="waking" class="border-solid border-2 w-full h-20"></textarea>
+                </p>
+                <p>
+                  <label for="todo">What do you need to do today?</label>
+                </p>
+                <p>
+                  <textarea name="todo" class="border-solid border-2 w-full h-20"></textarea>
+                </p>
+                <p>
+                  <label for="mainEntry">What happened today?</label>
+                </p>
+                <p>
+                  <textarea name="mainEntry" class="border-solid border-2 w-full h-40"></textarea>
+                </p>
+                <p>
+                  <label for="sleeping">How do you feel going to sleep?</label>
+                </p>
+                <p>
+                  <textarea name="sleeping" class="border-solid border-2 w-full h-20"></textarea>
+                </p>
+                <p>
+                  <label for="verification">Do you like cats?</label>
+                  <input type="checkbox" name="verification" id="verification" />
+                </p>
+              </form>
+            </div>
             <!-- Modal footer -->
             <div class="modal-footer flex flex-shrink-0 items-center justify-end p-4">
               <button
