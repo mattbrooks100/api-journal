@@ -39,32 +39,32 @@
             </div>
             <!-- Modal body -->
             <div class="modal-body flex flex-row relative w-full p-4">
-              <form action="" method="post" class="w-full">
-                <label for="date">Date</label>
-                <input type="date" name="date" class="border-solid border-2" />
+              <form class="w-full" id="entry-form">
+                <label for="entry_date">Date</label>
+                <input type="date" name="entry_date" class="border-solid border-2" />
                 <p>
-                  <label for="waking">How did you feel when you woke up?</label>
+                  <label for="wake_feel">How did you feel when you woke up?</label>
                 </p>
                 <p>
-                  <textarea name="waking" class="border-solid border-2 w-full h-20"></textarea>
+                  <textarea name="wake_feel" class="border-solid border-2 w-full h-20"></textarea>
                 </p>
                 <p>
-                  <label for="todo">What do you need to do today?</label>
+                  <label for="accomplish">What did you accomplish?</label>
                 </p>
                 <p>
-                  <textarea name="todo" class="border-solid border-2 w-full h-20"></textarea>
+                  <textarea name="accomplish" class="border-solid border-2 w-full h-20"></textarea>
                 </p>
                 <p>
-                  <label for="mainEntry">What happened today?</label>
+                  <label for="main_entry">What happened today?</label>
                 </p>
                 <p>
-                  <textarea name="mainEntry" class="border-solid border-2 w-full h-40"></textarea>
+                  <textarea name="main_entry" class="border-solid border-2 w-full h-40"></textarea>
                 </p>
                 <p>
-                  <label for="sleeping">How do you feel going to sleep?</label>
+                  <label for="tomorrow">What will you accomplish tomorrow?</label>
                 </p>
                 <p>
-                  <textarea name="sleeping" class="border-solid border-2 w-full h-20"></textarea>
+                  <textarea name="tomorrow" class="border-solid border-2 w-full h-20"></textarea>
                 </p>
                 <p>
                   <label for="verification">Do you like cats?</label>
@@ -82,7 +82,8 @@
                 Close
               </button>
               <button
-                type="button"
+                type="submit"
+                form="entry-form"
                 class="px-6 py-2.5 bg-amber-200 text-black font-medium text-xs uppercase rounded shadow-md hover:bg-amber-300 hover:shadow-lg ml-2"
                 id="submit-button"
               >

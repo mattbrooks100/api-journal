@@ -1,1 +1,3 @@
-INSERT INTO entry (entry_date, wake_feel, todo, main_entry, sleep_feel) VALUES ('2022-12-14', 'Great', 'Work out, do laundry, write awesome code','Today was a good day. I did a whole lot of things. I learned so much. Wow.', 'Very tired');
+INSERT INTO entry (entry_date, wake_feel, accomplish, main_entry, tomorrow) VALUES ('2022-12-16', 'Great!', 'Worked out, did laundry, wrote awesome code.','Today was a good day. I did a whole lot of things. I learned so much. Wow.', 'Work on my MVP project.'),
+('2022-12-17', 'Woke up feeling 31.', 'Got a massage, ate steak, ate cake.', 'Had a very good birthday. Accomplished everything I thought I would!', 'Tomorrow I will work on being 31.'),
+('2022-12-18', 'My bones are creaking.', 'There is literally nothing I needed to do today.', 'Today I did not do anything.', 'Tomorrow my bones will creak once more.');
