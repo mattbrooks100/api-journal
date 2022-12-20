@@ -7,8 +7,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.static("./public"));
-// const sql = postgres(process.env.DATABASE_URL);
-const sql = postgres({ database: "journal" });
+const sql = postgres(process.env.DATABASE_URL);
+// const sql = postgres({ database: "journal" });
 
 //================== API ROUTES ==================//
 // GET - read all journal entries
