@@ -29,7 +29,10 @@
         </div>
       </nav>
       <!-- New entry modal -->
-      <div class="fixed hidden insert-0 bg-gray-600 bg-opacity-50 w-full h-full" id="entry-modal">
+      <div
+        class="fixed hidden insert-0 bg-gray-600 bg-opacity-50 w-full h-full z-10"
+        id="entry-modal"
+      >
         <div class="modal-dialog relative top-5 mx-auto w-3/4">
           <!-- All modal content -->
           <div class="modal-content shadow-lg relative flex flex-col w-full bg-white rounded-md">
@@ -41,7 +44,7 @@
             <div class="modal-body flex flex-row relative w-full p-4">
               <form class="w-full" id="entry-form">
                 <label for="entry_date">Date</label>
-                <input type="date" name="entry_date" class="border-solid border-2" />
+                <input type="date" name="entry_date" class="border-solid border-2" required />
                 <p>
                   <label for="wake_feel">How did you feel when you woke up?</label>
                 </p>
@@ -70,6 +73,7 @@
                   <label for="verification">Do you like cats?</label>
                   <input type="checkbox" name="verification" id="verification" />
                 </p>
+                <small class="verification-message text-red-600 font-semibold"></small>
               </form>
             </div>
             <!-- Modal footer -->
