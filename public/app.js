@@ -7,7 +7,9 @@ fetch("/api/entries")
     for (let entry of entryArray) {
       let { id, entry_date, wake_feel, accomplish, main_entry, tomorrow } = entry;
       // Convert the date to a human friendly format
-      entry_date = new Date(entry_date).toLocaleDateString("en-us", {
+      entry_date = new Date(entry_date);
+      entry_date.setDate(entry_date.getDate() + 1);
+      const real_date = entry_date.toLocaleDateString("en-us", {
         weekday: "long",
         year: "numeric",
         month: "short",
@@ -17,7 +19,7 @@ fetch("/api/entries")
       const newEntryDiv = document.createElement("div");
       newEntryDiv.className = "entry relative mb-4 p-4 bg-amber-100 shadow-lg rounded-xl";
       newEntryDiv.setAttribute("id", `${id}`);
-      newEntryDiv.innerHTML = `<b>Date:</b> ${entry_date}<br>
+      newEntryDiv.innerHTML = `<b>Date:</b> ${real_date}<br>
         <b>How did you feel when you woke up?</b> <p>${wake_feel}</p>
         <b>What did you accomplish?</b> <p>${accomplish}</p>
         <b>What happened today?</b> <p>${main_entry}</p>
